@@ -1,0 +1,18 @@
+<div class="col-3 col-s-12 menu">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/find-pet">Find a Dog/Cat</a></li>
+    <li><a href="/dog-care">Dog Care</a></li>
+    <li><a href="/cat-care">Cat Care</a></li>
+    <li><a href="/have-pet">Have a Pet to Give Away</a></li>
+    <li><a href="/contact-us">Contact Us</a></li>
+
+    <% if (isLoggedIn) { %>
+      <li><a href="/logout">Logout</a></li>
+    <% } else { %>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/create-account">Create an Account</a></li>
+    <% } %>
+  </ul>
+
+</div>

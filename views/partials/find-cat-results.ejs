@@ -1,0 +1,20 @@
+<h2>Search Results for Cats</h2>
+<% if (matchedCats && matchedCats.length > 0) { %>
+  <ul>
+    <% matchedCats.forEach(cat => { %>
+      <li>
+        <p>ID: <%= cat[0] %></p>
+        <p>Breed: <%= cat[3] %></p>
+        <p>Age: <%= cat[4] %></p>
+        <p>Gender: <%= cat[5] %></p>
+        <p>Gets along with Dogs: <%= cat[6] %></p>
+        <p>Gets along with Cats: <%= cat[7] %></p>
+        <p>Gets along with Children: <%= cat[8] %></p>
+        <p>Additional Info: <%= cat[9] %></p>
+        <p>Contact: <%= cat[10] %> <%= cat[11] %> (<%= cat[12] %>)</p>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No cats found matching your criteria.</p>
+<% } %>

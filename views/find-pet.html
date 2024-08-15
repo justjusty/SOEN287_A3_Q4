@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy</title>
+  <link rel="stylesheet" href="/css/Q4Style.css">
+  <script src="/js/datetime.js" defer></script>
+  <script src="/js/FindPetValidation.js" defer></script>
+
+</head>
+<body>
+
+
+
+<div class="row">
+
+  <div class="col-9 col-s-12">
+    <form id="findDogForm" action="/find-dog-results" method="POST">
+      <fieldset>
+        <legend><h2>Find a Dog</h2></legend>
+        <p id="error-message-dog" class="error-message"></p>
+        <label>Breed of Dog:</label><br>
+        <label><input type="checkbox" name="dogbreed" value="Doesn't matter"> Doesn't matter </label>
+        <label><input type="checkbox" name="dogbreed" value="Labrador Retriever"> Labrador Retriever</label>
+        <label><input type="checkbox" name="dogbreed" value="German Shepherd"> German Shepherd</label>
+        <label><input type="checkbox" name="dogbreed" value="Golden Retriever"> Golden Retriever</label>
+        <label><input type="checkbox" name="dogbreed" value="Bulldog"> Bulldog</label>
+        <label><input type="checkbox" name="dogbreed" value="Poodle"> Poodle</label>
+        <label><input type="checkbox" name="dogbreed" value="Chihuahuas"> Chihuahuas</label>
+        <label><input type="checkbox" name="dogbreed" value="Beagles"> Beagles</label><br><br>
+
+        <label for="dogage">Preferred age of dog: </label>
+        <select id="dogage" name="dogage">
+          <option value="">Select age</option>
+          <option>Puppy (0-1 year)</option>
+          <option>Young (1-3 years)</option>
+          <option>Adult (3-7 years)</option>
+          <option>Senior (7+ years)</option>
+          <option>Doesn't matter</option>
+        </select><br><br>
+
+        <label>Preferred gender:</label>
+        <input type="radio" id="maledog" name="doggender" value="male">
+        <label for="maledog"> Male</label>
+        <input type="radio" id="femaledog" name="doggender" value="female">
+        <label for="femaledog"> Female</label>
+        <input type="radio" id="noprefdog" name="doggender" value="nopref">
+        <label for="noprefdog"> Doesn't matter</label><br><br>
+
+        <label>Need to get along with:</label><br>
+        <label>Other dogs:</label>
+        <label><input type="checkbox" name="doggetalongdogs" value="yes">Yes</label>
+        <label><input type="checkbox" name="doggetalongdogs" value="no">No</label>
+        <label><input type="checkbox" name="doggetalongdogs" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <label>Other cats:</label>
+        <label><input type="checkbox" name="doggetalongcats" value="yes">Yes</label>
+        <label><input type="checkbox" name="doggetalongcats" value="no">No</label>
+        <label><input type="checkbox" name="doggetalongcats" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <label>Small Children:</label>
+        <label><input type="checkbox" name="doggetalongchildren" value="yes">Yes</label>
+        <label><input type="checkbox" name="doggetalongchildren" value="no">No</label>
+        <label><input type="checkbox" name="doggetalongchildren" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <button type="reset" id="clearButton1">Clear</button>
+        <button type="submit" id="submitButton1">Submit</button>
+      </fieldset>
+    </form>
+    <br><br>
+
+    <form id="findCatForm" action="/find-cat-results" method="POST">
+      <fieldset>
+        <legend><h2>Find a Cat</h2></legend>
+        <p id="error-message-cat" class="error-message"></p>
+        <label>Breed of Cat:</label>
+        <label><input type="checkbox" name="catbreed" value="Doesn't matter">Doesn't matter </label>
+        <label><input type="checkbox" name="catbreed" value="Domestic Shorthair">Domestic Shorthair</label>
+        <label><input type="checkbox" name="catbreed" value="Domestic Longhair">Domestic Longhair</label>
+        <label><input type="checkbox" name="catbreed" value="Tabby">Tabby</label>
+        <label><input type="checkbox" name="catbreed" value="Tuxedo">Tuxedo</label>
+        <label><input type="checkbox" name="catbreed" value="Siamese">Siamese</label>
+        <label><input type="checkbox" name="catbreed" value="Maine Coon">Maine Coon</label>
+        <label><input type="checkbox" name="catbreed" value="Calico">Calico</label><br><br>
+
+        <label for="agecat">Preferred age of cat: </label>
+        <select id="agecat" name="agecat">
+          <option value="">Select age</option>
+          <option>Kitten (0-1 year)</option>
+          <option>Young (1-3 years)</option>
+          <option>Adult (3-7 years)</option>
+          <option>Senior (7+ years)</option>
+          <option>Doesn't matter</option>
+        </select><br><br>
+
+        <label>Preferred gender:</label>
+        <input type="radio" id="malecat" name="catgender" value="male">
+        <label for="malecat"> Male</label>
+        <input type="radio" id="femalecat" name="catgender" value="female">
+        <label for="femalecat"> Female</label>
+        <input type="radio" id="noprefcat" name="catgender" value="nopref">
+        <label for="noprefcat"> Doesn't matter</label><br><br>
+
+        <label>Need to get along with:</label><br>
+        <label>Other dogs:</label>
+        <label><input type="checkbox" name="catgetalongdogs" value="yes">Yes</label>
+        <label><input type="checkbox" name="catgetalongdogs" value="no">No</label>
+        <label><input type="checkbox" name="catgetalongdogs" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <label>Other cats:</label>
+        <label><input type="checkbox" name="catgetalongcats" value="yes">Yes</label>
+        <label><input type="checkbox" name="catgetalongcats" value="no">No</label>
+        <label><input type="checkbox" name="catgetalongcats" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <label>Small Children:</label>
+        <label><input type="checkbox" name="catgetalongchildren" value="yes">Yes</label>
+        <label><input type="checkbox" name="catgetalongchildren" value="no">No</label>
+        <label><input type="checkbox" name="catgetalongchildren" value="Doesn't matter">Doesn't matter</label><br><br>
+
+        <button type="reset" id="clearButton2">Clear</button>
+        <button type="submit" id="submitButton2">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

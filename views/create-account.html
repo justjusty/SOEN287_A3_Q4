@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="/css/Q4Style.css">
+  <script src="/js/createAccountValidation.js" defer></script>
+  <script src="/js/datetime.js" defer></script>
+
+</head>
+<body>
+
+<div class="row">
+
+
+  <div class="col-9 col-s-12">
+    <div class="create-account-page">
+      <h2 class="create-account-title">Create Account</h2>
+      <form id="createAccountForm" class="create-account-form" action="/create-account" method="POST">
+      <div class="create-account-field">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <small>Letters and digits only.</small>
+        </div>
+
+        <div class="create-account-field">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <small>At least 4 characters long, with at least one letter and one digit.</small>
+        </div>
+
+        <button type="submit" class="create-account-button">Create Account</button>
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

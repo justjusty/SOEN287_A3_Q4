@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Have a pet to give away</title>
+  <link rel="stylesheet" href="/css/Q4Style.css">
+  <script src="/js/HavePetValidation.js" defer></script>
+  <script src="/js/datetime.js" defer></script>
+</head>
+<body>
+
+
+
+<div class="row">
+
+  <div class="col-9 col-s-12">
+    <form id="giveAwayDogForm" action="/submit-pet" method="POST">
+      <input type="hidden" name="petType" value="dog">
+      <fieldset>
+        <legend><h2>Have a dog to give away?</h2></legend>
+        <p id="error-message-giveaway-dog" class="error-message"></p>
+        <div class="form-group">
+          <label>Breed of Dog:</label><br>
+          <label><input type="checkbox" name="breed-dog[]" value="Mix breed"> Mix breed </label>
+          <label><input type="checkbox" name="breed-dog[]" value="Labrador Retriever"> Labrador Retriever</label>
+          <label><input type="checkbox" name="breed-dog[]" value="German Shepherd"> German Shepherd</label>
+          <label><input type="checkbox" name="breed-dog[]" value="Golden Retriever"> Golden Retriever</label>
+          <label><input type="checkbox" name="breed-dog[]" value="Bulldog"> Bulldog</label>
+          <label><input type="checkbox" name="breed-dog[]" value="Poodle"> Poodle</label>
+          <label><input type="checkbox" name="breed-dog[]" value="Chihuahuas"> Chihuahuas</label>
+          <label><input type="checkbox" name="breed-dog[]" value="Beagles"> Beagles</label>
+          <label for="otherdogbreed">Other (Please specify): </label><input type="text" id="otherdogbreed" name="otherdogbreed">
+        </div>
+
+        <div class="form-group">
+          <label for="animalage-dog"> Age of Dog: </label>
+          <select id="animalage-dog" name="animalage-dog">
+            <option value="">Select age</option>
+            <option value="Puppy/Kitten (0-1 year)">Puppy/Kitten (0-1 year)</option>
+            <option value="Young (1-3 years)">Young (1-3 years)</option>
+            <option value="Adult (3-7 years)">Adult (3-7 years)</option>
+            <option value="Senior (7+ years)">Senior (7+ years)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label> Gender of Dog:</label>
+          <label><input type="radio" id="male-dog" name="gender-dog" value="male"> Male</label>
+          <label><input type="radio" id="female-dog" name="gender-dog" value="female"> Female</label>
+        </div>
+
+        <div class="form-group">
+          <label>Get along with other dogs:</label>
+          <label><input type="radio" name="getalong-dog" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-dog" value="no">No</label>
+          <label><input type="radio" name="getalong-dog" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Get along with other cats:</label>
+          <label><input type="radio" name="getalong-cats" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-cats" value="no">No</label>
+          <label><input type="radio" name="getalong-cats" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Suitable for family with small children:</label>
+          <label><input type="radio" name="getalong-children" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-children" value="no">No</label>
+          <label><input type="radio" name="getalong-children" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Information on Dog:</label><br>
+          <label for="info-dog"></label><textarea id="info-dog" name="info-dog" rows="5" cols="40"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>First Name: </label>
+          <label for="firstname-dog"> </label><input type="text" id="firstname-dog" name="firstname-dog">
+        </div>
+
+        <div class="form-group">
+          <label>Last Name: </label>
+          <label for="lastname-dog"></label><input type="text" id="lastname-dog" name="lastname-dog">
+        </div>
+
+        <div class="form-group">
+          <label>Email: </label>
+          <label for="email-dog"></label><input type="text" id="email-dog" name="email-dog">
+        </div>
+
+        <button type="reset" id="clearButtonDog">Clear</button>
+        <button type="submit" id="submitButtonDog">Submit</button>
+
+      </fieldset>
+    </form>
+    <br><br>
+    <form id="giveAwayCatForm" action="/submit-pet" method="POST">
+      <input type="hidden" name="petType" value="cat">
+      <fieldset>
+        <legend><h2>Have a cat to give away?</h2></legend>
+        <p id="error-message-giveaway-cat" class="error-message"></p>
+        <div class="form-group">
+          <label>Breed of Cat:</label><br>
+          <label><input type="checkbox" name="breed-cat[]" value="Domestic Shorthair">Domestic Shorthair</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Domestic Longhair">Domestic Longhair</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Tabby">Tabby</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Tuxedo">Tuxedo</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Siamese">Siamese</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Maine Coon">Maine Coon</label>
+          <label><input type="checkbox" name="breed-cat[]" value="Calico">Calico</label>
+          <label for="othercatbreed">Other (Please specify): </label><input type="text" id="othercatbreed" name="othercatbreed">
+        </div>
+
+        <div class="form-group">
+          <label for="animalage-cat"> Age of Cat: </label>
+          <select id="animalage-cat" name="animalage-cat">
+            <option value="">Select age</option>
+            <option value="Puppy/Kitten (0-1 year)">Puppy/Kitten (0-1 year)</option>
+            <option value="Young (1-3 years)">Young (1-3 years)</option>
+            <option value="Adult (3-7 years)">Adult (3-7 years)</option>
+            <option value="Senior (7+ years)">Senior (7+ years)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label> Gender of Cat:</label>
+          <label><input type="radio" id="male-cat" name="gender-cat" value="male"> Male</label>
+          <label><input type="radio" id="female-cat" name="gender-cat" value="female"> Female</label>
+        </div>
+
+        <div class="form-group">
+          <label>Get along with other dogs:</label>
+          <label><input type="radio" name="getalong-dogs-cat" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-dogs-cat" value="no">No</label>
+          <label><input type="radio" name="getalong-dogs-cat" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Get along with other cats:</label>
+          <label><input type="radio" name="getalong-cats-cat" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-cats-cat" value="no">No</label>
+          <label><input type="radio" name="getalong-cats-cat" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Suitable for family with small children:</label>
+          <label><input type="radio" name="getalong-children-cat" value="yes">Yes</label>
+          <label><input type="radio" name="getalong-children-cat" value="no">No</label>
+          <label><input type="radio" name="getalong-children-cat" value="not sure">Not Sure</label>
+        </div>
+
+        <div class="form-group">
+          <label>Information on Cat:</label><br>
+          <label for="info-cat"></label><textarea id="info-cat" name="info-cat" rows="5" cols="40"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>First Name: </label>
+          <label for="firstname-cat"> </label><input type="text" id="firstname-cat" name="firstname-cat">
+        </div>
+
+        <div class="form-group">
+          <label>Last Name: </label>
+          <label for="lastname-cat"></label><input type="text" id="lastname-cat" name="lastname-cat">
+        </div>
+
+        <div class="form-group">
+          <label>Email: </label>
+          <label for="email-cat"></label><input type="text" id="email-cat" name="email-cat">
+        </div>
+
+        <button type="reset" id="clearButtonCat">Clear</button>
+        <button type="submit" id="submitButtonCat">Submit</button>
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>

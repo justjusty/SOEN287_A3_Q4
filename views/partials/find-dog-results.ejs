@@ -1,0 +1,20 @@
+<h2>Search Results for Dogs</h2>
+<% if (matchedDogs && matchedDogs.length > 0) { %>
+  <ul>
+    <% matchedDogs.forEach(dog => { %>
+      <li>
+        <p>ID: <%= dog[0] %></p>
+        <p>Breed: <%= dog[3] %></p>
+        <p>Age: <%= dog[4] %></p>
+        <p>Gender: <%= dog[5] %></p>
+        <p>Gets along with Dogs: <%= dog[6] %></p>
+        <p>Gets along with Cats: <%= dog[7] %></p>
+        <p>Gets along with Children: <%= dog[8] %></p>
+        <p>Additional Info: <%= dog[9] %></p>
+        <p>Contact: <%= dog[10] %> <%= dog[11] %> (<%= dog[12] %>)</p>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No dogs found matching your criteria.</p>
+<% } %>

@@ -1,0 +1,451 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  background-color: #EDECE3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.datetime {
+  text-align: center;
+  color: #D40C58;
+  width: 100%;
+}
+
+.dogcareimg{
+  width: 100%;
+  height: auto;
+}
+
+.catcareimg{
+  width: 100%;
+  height: auto;
+}
+
+.care ul {
+  margin-bottom: 30px;
+}
+
+.menu{
+  padding: 10px 0;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+
+.whyFEH li {
+  margin-bottom: 10px;
+}
+
+.menu li {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: lightpink;
+  color: black;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  background-color: #EDECE3;
+}
+
+.footer {
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.contact-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form, .contact-info {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  flex: 2;
+  background-color: #f9f9f9;
+  border-radius: 5px 0 0 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+  flex: 1;
+  background-color: royalblue;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.contact-form h2, .contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-form label, .contact-info p {
+  display: block;
+  margin: 10px 0;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.contact-form input[type="text"], .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.contact-form input[type="submit"] {
+  background-color: royalblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: mediumblue;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form button[type="submit"] {
+  background-color: #D40C58;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #a50e42;
+}
+
+
+.img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  grid-gap: 2rem;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.7);
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+
+.card-content {
+  position: absolute;
+  background-color: rgba(0 0 0/50%);
+  bottom: 0;
+  color: #ffffff;
+  width: 100%;
+  height: 18%;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.7s;
+  max-height: 100%;
+}
+
+.card-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.card-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 1.2rem;
+}
+
+.card:hover .card-content {
+  height: 80%;
+  transition: 0.7s;
+}
+
+
+.interested-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #D40C58;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.interested-button:hover {
+  background-color: #a50e42;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="reset"],
+button[type="submit"] {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D40C58;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="reset"]:hover,
+button[type="submit"]:hover {
+  background-color: #a50e42;
+}
+
+
+/* Create Account Page Styles */
+.create-account-page {
+  width: 100%; /* Ensure full width within col-9 */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Remove auto margin to prevent centering */
+}
+
+.create-account-title {
+  font-size: 1.8rem;
+  color: var(--primary-color); /* Use the existing primary color variable */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.create-account-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-account-field {
+  margin-bottom: 1.5rem;
+}
+
+.create-account-field label {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.create-account-field input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.create-account-field small {
+  color: var(--secondary-color); /* Use the existing secondary color variable */
+}
+
+.create-account-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.create-account-button:hover {
+  background-color: #a50e42; /* Darker shade for hover */
+}
+
+/* Login Page Styles */
+.login-page {
+  width: 100%; /* Ensure full width within col-9 */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Remove auto margin to prevent centering */
+}
+
+.login-title {
+  font-size: 1.8rem;
+  color: var(--primary-color); /* Use the existing primary color variable */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-field {
+  margin-bottom: 1.5rem;
+}
+
+.login-field label {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.login-button:hover {
+  background-color: #a50e42; /* Darker shade for hover */
+}
+
+
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

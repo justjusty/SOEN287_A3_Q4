@@ -1,0 +1,2 @@
+1:max1:dog::Adult (3-7 years):male:yes:yes:not sure:bulldog 1 :max:qiu:max123@gmail.com
+2:yvonne1:cat::Puppy/Kitten (0-1 year):male:not sure:not sure:not sure:calico:yvonne:yuan:yy123@gmail.com
